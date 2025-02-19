@@ -29,7 +29,12 @@
                 <TextBox Grid.Row="4" Watermark="Email"></TextBox>
             </Grid>
             <Grid Grid.Column="1" RowDefinitions="Auto, *">
-                <ComboBox Grid.Row="0" Classes="accesslevel" SelectedIndex="0">Guest</ComboBox>
+                <ComboBox Grid.Row="0" Classes="accesslevel" SelectedIndex="0">
+                    <ComboBoxItem Content="Guest" />
+                    <ComboBoxItem Content="User" />
+                    <ComboBoxItem Content="Moderator" />
+                    <ComboBoxItem Content="Administrator" />
+                </ComboBox>
                 <TextBox Grid.Row="1" Classes="note" Watermark="Note"></TextBox>
             </Grid>
         </Grid>

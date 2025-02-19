@@ -21,7 +21,7 @@
         <Style Selector="Button.topside">
                 <Setter Property="VerticalAlignment" Value="Center"></Setter>
                 <Setter Property="Height" Value="35"></Setter>
-                <Setter Property="Width" Value="65"></Setter>
+                <Setter Property="Width" Value="110"></Setter>
                 <Setter Property="Margin" Value="4, 0,0,0"></Setter>
                 <Setter Property="FontFamily" Value="{DynamicResource Phosphor}"></Setter>
                 <Setter Property="FontSize" Value="17"></Setter>
@@ -55,6 +55,9 @@
         <Style Selector="TextBlock.tablefont">
                 <Setter Property="FontFamily" Value="{DynamicResource Montserrat}"></Setter>
                 <Setter Property="FontWeight" Value="SemiBold"></Setter>
-                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="FontSize" Value="14"></Setter>
+                <Setter Property="Margin" Value="5"></Setter>
+                <Setter Property="Width" Value="100"></Setter>
+                <Setter Property="LineSpacing" Value="2"></Setter>
         </Style>
 </Styles>
