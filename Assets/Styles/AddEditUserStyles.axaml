@@ -1,0 +1,63 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        
+        <!-- Задний фон и шапка -->
+        <Style Selector="Grid.background">
+                <Setter Property="Background" Value="#0C7CCD"></Setter>
+        </Style>
+        <Style Selector="Label.headericon">
+                <Setter Property="FontFamily" Value="{DynamicResource Phosphor}"></Setter>
+                <Setter Property="FontSize" Value="24"></Setter>
+                <Setter Property="Foreground" Value="#D0D2D6"></Setter>
+                <Setter Property="Margin" Value="0,8,0,0"></Setter>
+                <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+                <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                <Setter Property="Height" Value="45"></Setter>
+        </Style>
+        <Style Selector="Label.header">
+                <Setter Property="FontFamily" Value="{DynamicResource Montserrat}"></Setter>
+                <Setter Property="FontWeight" Value="Black"></Setter>
+                <Setter Property="FontSize" Value="24"></Setter>
+                <Setter Property="Foreground" Value="#D0D2D6"></Setter>
+                <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+                <Setter Property="Height" Value="45"></Setter>
+        </Style>
+        <Style Selector="Grid.header">
+                <Setter Property="Background" Value="#0A62A3"></Setter>
+        </Style>
+        <Style Selector="StackPanel.header">
+                <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        </Style>
+        
+        <!-- Список полей и выпадающий список -->
+        <Style Selector="TextBox">
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="Margin" Value="4"></Setter>
+        </Style>
+        <Style Selector="TextBox.note">
+                <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+                <Setter Property="VerticalContentAlignment" Value="Top"></Setter>
+                <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                <Setter Property="AcceptsReturn" Value="True"></Setter>
+        </Style>
+        <Style Selector="ComboBox.accesslevel">
+                <Setter Property="FontFamily" Value="{DynamicResource Montserrat}"></Setter>
+                <Setter Property="FontWeight" Value="Black"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="Margin" Value="5"></Setter>
+                <Setter Property="Width" Value="200"></Setter>
+        </Style>
+        
+        <!-- Кнопки -->
+
+        <Style Selector="Button.leftside">
+                <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+                <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+                <Setter Property="Margin" Value="10"></Setter>
+                <Setter Property="FontFamily" Value="{DynamicResource Phosphor}"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
+                <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        </Style>
+
+</Styles>

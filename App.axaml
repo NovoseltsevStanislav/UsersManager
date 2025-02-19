@@ -1,0 +1,25 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="UsersManager.App"
+             xmlns:local="using:UsersManager"
+             RequestedThemeVariant="Light">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+  
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+
+	<Application.Resources>
+		<FontFamily x:Key="Montserrat">/Assets/Fonts/Montserrat/Montserrat.ttf</FontFamily>
+		<FontFamily x:Key="Phosphor">/Assets/Fonts/Phosphor/Phosphor.ttf#Phosphor</FontFamily>
+		<FontFamily x:Key="PhosphorBold">/Assets/Fonts/Phosphor/Phosphor-Bold.ttf#Phosphor-Bold</FontFamily>
+		<FontFamily x:Key="PhosphorDuotone">/Assets/Fonts/Phosphor/Phosphor-Duotone.ttf#Phosphor-Duotone</FontFamily>
+		<FontFamily x:Key="PhosphorFill">/Assets/Fonts/Phosphor/Phosphor-Fill.ttf#Phosphor-Fill</FontFamily>
+		<FontFamily x:Key="PhosphorLight">/Assets/Fonts/Phosphor/Phosphor-Light.ttf#Phosphor-Light</FontFamily>
+		<FontFamily x:Key="PhosphorThin">/Assets/Fonts/Phosphor/Phosphor-Thin.ttf#Phosphor-Thin</FontFamily>
+	</Application.Resources>
+</Application>

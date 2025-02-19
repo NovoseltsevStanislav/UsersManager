@@ -1,0 +1,59 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="400"
+             
+             xmlns:vm="clr-namespace:UsersManager.ViewModels"
+             x:DataType="vm:UserListViewModel"
+             
+             x:Class="UsersManager.Views.UserListView">
+    
+    <UserControl.Styles>
+        <StyleInclude Source="/Assets/Styles/UserListStyles.axaml"></StyleInclude>
+    </UserControl.Styles>
+    
+    <Grid ColumnDefinitions="*">
+        <Grid Grid.Column="0" RowDefinitions="Auto, Auto, *">
+            <Grid Grid.Row="0" Classes="topside" Height="50" ColumnDefinitions="*, Auto">
+                <Button Grid.Column="0" Classes="topside">
+                    <StackPanel Orientation="Horizontal">
+                        <Label>database</Label>
+                        <Label Classes="topsidefont">DB</Label>
+                    </StackPanel>
+                </Button>
+                <TextBox Grid.Column="1" Classes="topside" Watermark="Search by First Name"></TextBox>
+            </Grid>
+            <Grid Grid.Row="1" Classes="listhat" ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+                <TextBlock Grid.Column="0" Classes="tablefont">Имя</TextBlock>
+                <TextBlock Grid.Column="1" Classes="tablefont">Фамилия</TextBlock>
+                <TextBlock Grid.Column="2" Classes="tablefont">Логин</TextBlock>
+                <TextBlock Grid.Column="3" Classes="tablefont">Пароль</TextBlock>
+                <TextBlock Grid.Column="4" Classes="tablefont">Электронная почта</TextBlock>
+                <TextBlock Grid.Column="5" Classes="tablefont">Уровень допуска</TextBlock>
+                <TextBlock Grid.Column="6" Classes="tablefont">Заметка</TextBlock>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Border Classes="list">
+                    <ScrollViewer>
+                        <ItemsControl ItemsSource="**********************">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+                                        <TextBlock Grid.Column="0" Classes="tablefont">Имя</TextBlock>
+                                        <TextBlock Grid.Column="1" Classes="tablefont">Фамилия</TextBlock>
+                                        <TextBlock Grid.Column="2" Classes="tablefont">Логин</TextBlock>
+                                        <TextBlock Grid.Column="3" Classes="tablefont">Пароль</TextBlock>
+                                        <TextBlock Grid.Column="4" Classes="tablefont">Электронная почта</TextBlock>
+                                        <TextBlock Grid.Column="5" Classes="tablefont">Уровень допуска</TextBlock>
+                                        <TextBlock Grid.Column="6" Classes="tablefont">Заметка</TextBlock>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

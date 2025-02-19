@@ -1,0 +1,60 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        
+        <!-- Правая сторона окна -->
+        <Style Selector="Button.rightside">
+                <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+                <Setter Property="Height" Value="50"></Setter>
+                <Setter Property="Width" Value="50"></Setter>
+                <Setter Property="Margin" Value="10"></Setter>
+                <Setter Property="FontFamily" Value="{DynamicResource Phosphor}"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
+                <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        </Style>
+        <Style Selector="Grid.rightside">
+                <Setter Property="Background" Value="#0C7CCD"></Setter>
+                <Setter Property="Width" Value="70"></Setter>
+        </Style>
+        
+        <!-- Верхняя часть окна -->
+        <Style Selector="Button.topside">
+                <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                <Setter Property="Height" Value="35"></Setter>
+                <Setter Property="Width" Value="65"></Setter>
+                <Setter Property="Margin" Value="4, 0,0,0"></Setter>
+                <Setter Property="FontFamily" Value="{DynamicResource Phosphor}"></Setter>
+                <Setter Property="FontSize" Value="17"></Setter>
+                <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        </Style>
+        <Style Selector="Grid.topside">
+                <Setter Property="Background" Value="#0C7CCD"></Setter>
+        </Style>
+        <Style Selector="Label.topsidefont">
+                <Setter Property="FontFamily" Value="{DynamicResource Montserrat}"></Setter>
+                <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                <Setter Property="FontSize" Value="12"></Setter>
+                <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        </Style>
+        <Style Selector="TextBox.topside">
+                <Setter Property="Height" Value="35"></Setter>
+                <Setter Property="Width" Value="300"></Setter>
+                
+        </Style>
+        
+        <!-- Шапка таблицы и таблица -->
+        <Style Selector="Grid.listhat">
+                <Setter Property="Background" Value="#0A62A3"></Setter>
+                <Setter Property="Height" Value="40"></Setter>
+        </Style>
+        <Style Selector="Border.list">
+                <Setter Property="Background" Value="#D0D2D6"></Setter>
+        </Style>
+        <Style Selector="TextBlock.tablefont">
+                <Setter Property="FontFamily" Value="{DynamicResource Montserrat}"></Setter>
+                <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+</Styles>

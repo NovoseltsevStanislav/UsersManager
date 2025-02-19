@@ -1,0 +1,42 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="400"
+             
+             xmlns:vm="clr-namespace:UsersManager.ViewModels"
+             x:DataType="vm:AddUserViewModel"
+             
+             x:Class="UsersManager.Views.AddUserView">
+    <UserControl.Styles>
+        <StyleInclude Source="/Assets/Styles/AddEditUserStyles.axaml"></StyleInclude>
+    </UserControl.Styles>
+    
+
+    <Grid Classes="background" RowDefinitions="*, 6*, Auto">
+        <Grid Grid.Row="0" Classes="header">
+            <StackPanel Classes="header" Orientation="Horizontal">
+                <Label Classes="headericon">user-plus</Label>
+                <Label Classes="header">New User</Label>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" ColumnDefinitions="*, *">
+            <Grid Grid.Column="0" RowDefinitions="*, *, *, *, *">
+                <TextBox Grid.Row="0" Watermark="First Name"></TextBox>
+                <TextBox Grid.Row="1" Watermark="Last Name"></TextBox>
+                <TextBox Grid.Row="2" Watermark="Login"></TextBox>
+                <TextBox Grid.Row="3" Watermark="Password"></TextBox>
+                <TextBox Grid.Row="4" Watermark="Email"></TextBox>
+            </Grid>
+            <Grid Grid.Column="1" RowDefinitions="Auto, *">
+                <ComboBox Grid.Row="0" Classes="accesslevel" SelectedIndex="0">Guest</ComboBox>
+                <TextBox Grid.Row="1" Classes="note" Watermark="Note"></TextBox>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" ColumnDefinitions="*, *">
+            <Button Grid.Column="0" Classes="leftside">dice-six person</Button>
+            <Button Grid.Column="1" Classes="leftside">check-fat</Button>
+        </Grid>
+    </Grid>
+
+</UserControl>
