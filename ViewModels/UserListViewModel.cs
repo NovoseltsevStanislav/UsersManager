@@ -18,17 +18,19 @@ namespace UsersManager.ViewModels
     public partial class UserListViewModel: ViewModelBase
     {
         [ObservableProperty] private string? _fileText;
+        [ObservableProperty] private string? _filePath;
         
         [RelayCommand]
         private async Task OpenFile(CancellationToken token)
         {
             var file = await DoOpenFilePickerAsync();
             if (file is null) return;
-            
-            await using var readStream = await file.OpenReadAsync();
-            using var reader = new StreamReader(readStream);
-            FileText = await reader.ReadToEndAsync(token);
-            Console.WriteLine(FileText);
+            //(Чтение данных из открытого файла)
+            // await using var readStream = await file.OpenReadAsync();
+            // using var reader = new StreamReader(readStream);
+            // FileText = await reader.ReadToEndAsync(token);
+            FilePath = file.TryGetLocalPath();
+            Console.WriteLine(FilePath);
         }
         
         private async Task<IStorageFile?> DoOpenFilePickerAsync()
@@ -37,7 +39,7 @@ namespace UsersManager.ViewModels
                 desktop.MainWindow?.StorageProvider is not { } provider)
                 throw new NullReferenceException("Missing StorageProvider instance.");
             
-            var LiteDbType = new FilePickerFileType("LiteDB Files")
+            var liteDbType = new FilePickerFileType("LiteDB Files")
             {
                 Patterns = new[] { "*.db" },
                 AppleUniformTypeIdentifiers = new[] { "*.db" },
@@ -47,7 +49,7 @@ namespace UsersManager.ViewModels
             var files = await provider.OpenFilePickerAsync(new FilePickerOpenOptions()
             {
                 Title = "Select LiteDB File",
-                FileTypeFilter = new[] {LiteDbType},
+                FileTypeFilter = new[] {liteDbType},
                 AllowMultiple = false
             });
 
