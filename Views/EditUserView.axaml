@@ -22,7 +22,7 @@
         </Grid>
         <Grid Grid.Row="1" ColumnDefinitions="*, *">
             <Grid Grid.Column="0" RowDefinitions="*, *, *, *, *">
-                <TextBox Grid.Row="0" Watermark="First Name"></TextBox>
+                <TextBox Grid.Row="0" Text="{Binding}" Watermark="First Name"></TextBox>
                 <TextBox Grid.Row="1" Watermark="Last Name"></TextBox>
                 <TextBox Grid.Row="2" Watermark="Login"></TextBox>
                 <TextBox Grid.Row="3" Watermark="Password"></TextBox>
@@ -35,7 +35,7 @@
                     <ComboBoxItem Content="Moderator" />
                     <ComboBoxItem Content="Administrator" />
                 </ComboBox>
-                <TextBox Grid.Row="1" Classes="note" Watermark="Note"></TextBox>
+                <TextBox Grid.Row="1" Classes="notes" Watermark="Notes"></TextBox>
             </Grid>
         </Grid>
         <Grid Grid.Row="2" ColumnDefinitions="*, *">

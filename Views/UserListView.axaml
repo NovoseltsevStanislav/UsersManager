@@ -14,7 +14,7 @@
     </UserControl.Styles>
     
     <Grid ColumnDefinitions="*">
-        <Grid Grid.Column="0" RowDefinitions="Auto, Auto, *">
+        <Grid Grid.Column="0" RowDefinitions="Auto, *">
             <Grid Grid.Row="0" Classes="topside" Height="50" ColumnDefinitions="*, Auto">
                 <Button Grid.Column="0" Classes="topside" Command="{Binding OpenFileCommand}"> 
                     <StackPanel Orientation="Horizontal">
@@ -24,35 +24,27 @@
                 </Button>
                 <TextBox Grid.Column="1" Classes="topside" Watermark="Search by First Name"></TextBox>
             </Grid>
-            <Grid Grid.Row="1" Classes="listhat" ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
-                <TextBlock Grid.Column="0" Classes="tablefont">ID</TextBlock>
-                <TextBlock Grid.Column="1" Classes="tablefont">First Name</TextBlock>
-                <TextBlock Grid.Column="2" Classes="tablefont">Last Name</TextBlock>
-                <TextBlock Grid.Column="3" Classes="tablefont">Login</TextBlock>
-                <TextBlock Grid.Column="4" Classes="tablefont">Password</TextBlock>
-                <TextBlock Grid.Column="5" Classes="tablefont">Email</TextBlock>
-                <TextBlock Grid.Column="6" Classes="tablefont">Access Level</TextBlock>
-                <TextBlock Grid.Column="7" Classes="tablefont">Note</TextBlock>
-            </Grid>
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="1">
                 <Border Classes="list">
                     <ScrollViewer>
-                        <ItemsControl ItemsSource="**********************">
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
-                                        <TextBlock Grid.Column="0" Classes="tablefont">УИ</TextBlock>
-                                        <TextBlock Grid.Column="1" Classes="tablefont">Имя</TextBlock>
-                                        <TextBlock Grid.Column="2" Classes="tablefont">Фамилия</TextBlock>
-                                        <TextBlock Grid.Column="3" Classes="tablefont">Логин</TextBlock>
-                                        <TextBlock Grid.Column="4" Classes="tablefont">Пароль</TextBlock>
-                                        <TextBlock Grid.Column="5" Classes="tablefont">Электронная почта</TextBlock>
-                                        <TextBlock Grid.Column="6" Classes="tablefont">Уровень допуска</TextBlock>
-                                        <TextBlock Grid.Column="7" Classes="tablefont">Заметка</TextBlock>
-                                    </Grid>
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
-                        </ItemsControl>
+                        <DataGrid Margin="1" ItemsSource="{Binding UsersBD}"
+                                  IsReadOnly="True"
+                                  CanUserReorderColumns="True"
+                                  CanUserResizeColumns="True"
+                                  CanUserSortColumns="False"
+                                  GridLinesVisibility="All"
+                                  BorderThickness="0" BorderBrush="Gray">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID"  Binding="{Binding Id}"/>
+                                <DataGridTextColumn Header="First Name"  Binding="{Binding FirstName}"/>
+                                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" />
+                                <DataGridTextColumn Header="Login"  Binding="{Binding Login}"/>
+                                <DataGridTextColumn Header="Password"  Binding="{Binding Password}"/>
+                                <DataGridTextColumn Header="Email"  Binding="{Binding Email}"/>
+                                <DataGridTextColumn Header="Access Level"  Binding="{Binding AccessLevel}"/>
+                                <DataGridTextColumn Header="Notes"  Binding="{Binding Notes}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </ScrollViewer>
                 </Border>
             </Grid>

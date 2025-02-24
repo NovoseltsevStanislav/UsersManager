@@ -34,7 +34,7 @@
                 <Setter Property="FontSize" Value="20"></Setter>
                 <Setter Property="Margin" Value="4"></Setter>
         </Style>
-        <Style Selector="TextBox.note">
+        <Style Selector="TextBox.notes">
                 <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
                 <Setter Property="VerticalContentAlignment" Value="Top"></Setter>
                 <Setter Property="TextWrapping" Value="Wrap"></Setter>

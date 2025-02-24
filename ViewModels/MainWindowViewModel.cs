@@ -5,8 +5,6 @@ namespace UsersManager.ViewModels
 {
     public partial class MainWindowViewModel : ViewModelBase
     {
-        // public string Greeting { get; } = "Welcome to Avalonia!";
-
         [ObservableProperty] //Обозначение свойства в CommunityToolkit.Mvvm
         private ViewModelBase _currentPage;
 

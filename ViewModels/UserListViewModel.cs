@@ -1,24 +1,56 @@
 ﻿using System;
+using System.Windows;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Data;
 using System.IO;
+using System.Reflection.Metadata.Ecma335;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Avalonia;
+using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Platform.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using UsersManager.Models;
-using UsersManager.ViewModels;
+using System.Linq;
 
 namespace UsersManager.ViewModels
 {
+    public static class OpenedFile
+    {
+        public static string DbPath;
+    }
+    
     public partial class UserListViewModel: ViewModelBase
     {
         [ObservableProperty] private string? _fileText;
         [ObservableProperty] private string? _filePath;
+        
+        public event PropertyChangedEventHandler? PropertyChanged;
+        public ObservableCollection<User> _usersbd;
+        public ObservableCollection<User> UsersBD
+        {
+            get => _usersbd;
+            set
+            {
+                _usersbd = value;
+                OnPropertyChanged(nameof(UsersBD));
+            }
+        }
+        
+        [RelayCommand]
+        public void LoadDataGrid()
+        {
+            
+            var dataService = new DataService();
+            var UserList = dataService.GetUserList();
+            _usersbd = new ObservableCollection<User>(UserList);
+        }
         
         [RelayCommand]
         private async Task OpenFile(CancellationToken token)
@@ -30,7 +62,10 @@ namespace UsersManager.ViewModels
             // using var reader = new StreamReader(readStream);
             // FileText = await reader.ReadToEndAsync(token);
             FilePath = file.TryGetLocalPath();
-            Console.WriteLine(FilePath);
+            OpenedFile.DbPath = FilePath;
+            LoadDataGrid();
+            
+            Console.WriteLine(OpenedFile.DbPath);
         }
         
         private async Task<IStorageFile?> DoOpenFilePickerAsync()
@@ -56,5 +91,15 @@ namespace UsersManager.ViewModels
             return files?.Count >= 1 ? files[0] : null;
         }
         
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        
+    }
+
+    public class UserListVMInfo : INotifyPropertyChanged
+    {
+        public event PropertyChangedEventHandler? PropertyChanged;
     }
 }

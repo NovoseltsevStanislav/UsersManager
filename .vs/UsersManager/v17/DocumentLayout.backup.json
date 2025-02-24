@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\!PROJECTS\\CSharpTest\\UsersManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|d:\\!projects\\csharptest\\usersmanager\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|solutionrelative:app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+      "AbsoluteMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|d:\\!projects\\csharptest\\usersmanager\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|solutionrelative:views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|d:\\!projects\\csharptest\\usersmanager\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|solutionrelative:app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|d:\\!projects\\csharptest\\usersmanager\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|solutionrelative:app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|d:\\!projects\\csharptest\\usersmanager\\assets\\styles\\mainstyles.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|solutionrelative:assets\\styles\\mainstyles.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|d:\\!projects\\csharptest\\usersmanager\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|solutionrelative:views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+      "AbsoluteMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|d:\\!projects\\csharptest\\usersmanager\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|solutionrelative:app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B85EC7A2-EE6B-4838-B420-A2387E9468FD}|UsersManager.csproj|d:\\!projects\\csharptest\\usersmanager\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "App.axaml",
               "DocumentMoniker": "D:\\!PROJECTS\\CSharpTest\\UsersManager\\App.axaml",
               "RelativeDocumentMoniker": "App.axaml",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "app.manifest",
               "DocumentMoniker": "D:\\!PROJECTS\\CSharpTest\\UsersManager\\app.manifest",
               "RelativeDocumentMoniker": "app.manifest",
@@ -75,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "D:\\!PROJECTS\\CSharpTest\\UsersManager\\Views\\MainWindow.axaml",
               "RelativeDocumentMoniker": "Views\\MainWindow.axaml",
