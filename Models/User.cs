@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Avalonia.Rendering.Composition;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+
 
 namespace UsersManager.Models
 {
     // Модель данных пользователя.
-    public class User
+    public class User 
     {
         // Уникальный идентификатор пользователя.
         public int Id { get; set; }

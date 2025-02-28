@@ -5,12 +5,14 @@
       <map>
         <entry key="App.axaml" value="UsersManager.csproj" />
         <entry key="Assets/Styles/AddEditUserStyles.axaml" value="UsersManager.csproj" />
+        <entry key="Assets/Styles/AllStyles.axaml" value="UsersManager.csproj" />
         <entry key="Assets/Styles/MainStyles.axaml" value="UsersManager.csproj" />
         <entry key="Assets/Styles/UserListStyles.axaml" value="UsersManager.csproj" />
         <entry key="Views/AddUser.axaml" value="UsersManager.csproj" />
         <entry key="Views/AddUserView.axaml" value="UsersManager.csproj" />
         <entry key="Views/EditUser.axaml" value="UsersManager.csproj" />
         <entry key="Views/EditUserView.axaml" value="UsersManager.csproj" />
+        <entry key="Views/MainView.axaml" value="UsersManager.csproj" />
         <entry key="Views/MainWindow.axaml" value="UsersManager.csproj" />
         <entry key="Views/MainWindowView.axaml" value="UsersManager.csproj" />
         <entry key="Views/UserList.axaml" value="UsersManager.csproj" />

@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace UsersManager.Views;
 
-public partial class EditUserView : UserControl
+public partial class MainView : Window
 {
-    public EditUserView()
+    public MainView()
     {
         InitializeComponent();
     }

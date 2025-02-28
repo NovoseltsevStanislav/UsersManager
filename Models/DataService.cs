@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Configuration;
 using System.Linq;
 using System.Text;
@@ -7,9 +8,16 @@ using System.Threading.Tasks;
 using LiteDB;
 using UsersManager.ViewModels;
 using File = System.IO.File;
+using Avalonia.Rendering.Composition;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace UsersManager.Models
 {
+    public static class OpenedFile
+    {
+        public static string DbPath;
+    }
     class DataService
     {
         

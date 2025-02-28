@@ -27,20 +27,14 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [D:/\!PROJECTS/DOTNET/UsersManager/Assets/Styles/AddEditUserStyles.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[D:/\!PROJECTS/DOTNET/UsersManager/Assets/Styles/AllStyles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [D:/\!PROJECTS/DOTNET/UsersManager/Assets/Styles/MainStyles.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [D:/\!PROJECTS/DOTNET/UsersManager/Assets/Styles/UserListStyles.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/\!PROJECTS/DOTNET/UsersManager/Views/AddUserView.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[D:/\!PROJECTS/DOTNET/UsersManager/Views/EditUserView.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[D:/\!PROJECTS/DOTNET/UsersManager/Views/MainWindowView.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[D:/\!PROJECTS/DOTNET/UsersManager/Views/UserListView.axaml]
+[D:/\!PROJECTS/DOTNET/UsersManager/Views/MainView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
