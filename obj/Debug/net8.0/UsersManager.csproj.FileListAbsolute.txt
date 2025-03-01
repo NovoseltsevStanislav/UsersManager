@@ -571,3 +571,4 @@ D:\!PROJECTS\CSHARP\UsersManager2\obj\Debug\net8.0\refint\Avalonia\UsersManager.
 D:\!PROJECTS\CSHARP\UsersManager2\obj\Debug\net8.0\UsersMan.27828466.Up2Date
 D:\!PROJECTS\CSHARP\UsersManager2\obj\Debug\net8.0\UsersManager.genruntimeconfig.cache
 D:\!PROJECTS\CSHARP\UsersManager2\obj\Debug\net8.0\ref\UsersManager.dll
+D:\!PROJECTS\DOTNET\UsersManager\bin\Debug\net8.0\Newtonsoft.Json.dll

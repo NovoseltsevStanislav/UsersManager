@@ -20,7 +20,6 @@ namespace UsersManager.Models
     }
     class DataService
     {
-        
         public IList<User> GetUserList()
         {
             IList<User> userlist = new List<User>();
@@ -36,7 +35,6 @@ namespace UsersManager.Models
             }
             return userlist;
         }
-
         public bool InsertUser(User user)
         {
             using (var db = new LiteDatabase(OpenedFile.DbPath))
@@ -54,7 +52,6 @@ namespace UsersManager.Models
                 }
             }
         }
-
         public bool UpdateUser(User user)
         {
             using (var db = new LiteDatabase(OpenedFile.DbPath))
@@ -75,7 +72,6 @@ namespace UsersManager.Models
                 }
             }
         }
-
         public bool DeleteUser(string id2)
         {
             int id = int.Parse(id2);
@@ -96,7 +92,6 @@ namespace UsersManager.Models
                 }
             }
         }
-
         public static string GetMD5Hash(string text)
         {
             if (string.IsNullOrEmpty(text))

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wIX7w37NXlQ=",
+  "dgSpecHash": "+SlNhcUv6zI=",
   "success": true,
   "projectFilePath": "D:\\!PROJECTS\\DOTNET\\UsersManager\\UsersManager.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,7 @@
     "C:\\Users\\novos\\.nuget\\packages\\monomod.ilhelpers\\1.1.0\\monomod.ilhelpers.1.1.0.nupkg.sha512",
     "C:\\Users\\novos\\.nuget\\packages\\monomod.runtimedetour\\25.2.1\\monomod.runtimedetour.25.2.1.nupkg.sha512",
     "C:\\Users\\novos\\.nuget\\packages\\monomod.utils\\25.0.7\\monomod.utils.25.0.7.nupkg.sha512",
+    "C:\\Users\\novos\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\novos\\.nuget\\packages\\skiasharp\\2.88.8\\skiasharp.2.88.8.nupkg.sha512",
     "C:\\Users\\novos\\.nuget\\packages\\skiasharp.nativeassets.linux\\2.88.8\\skiasharp.nativeassets.linux.2.88.8.nupkg.sha512",
     "C:\\Users\\novos\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.8\\skiasharp.nativeassets.macos.2.88.8.nupkg.sha512",

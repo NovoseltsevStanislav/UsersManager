@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.InteropServices.JavaScript;
+using System.Text.RegularExpressions;
 using System.Windows.Input;
 using Avalonia;
 using Avalonia.Controls;
@@ -17,14 +18,17 @@ using UsersManager.Models;
 namespace UsersManager.ViewModels;
 public partial class MainViewModel : ViewModelBase
 {
+    //Поле 
+    private DataService dataService = new DataService();
     //Поле с индексом выбранного пользователя
     [ObservableProperty] 
     private int _userIndex;
-    //Поля статуса активности кнопок
+    //Поле статуса активности кнопок
     [ObservableProperty]
     private Boolean _dbOpenedStatus = false;
+    //Поле ввода данных в поисковую строку
     [ObservableProperty]
-    private Boolean _selectUserStatus = false;
+    private string _searchText;
     //Поле с коллекцией пользователей (Users) с тремя заранее заготовленными пользователями
     [ObservableProperty]
     private Collection<User> _users = new(new []
@@ -73,29 +77,17 @@ public partial class MainViewModel : ViewModelBase
     //Конструктор
     public MainViewModel()
     {
-        // DataService dataService = new DataService();
-        // IList<User> usersList = dataService.GetUserList();
-        // IdView = usersList.First().Id;
-        // FirstNameView = usersList.First().FirstName;
-        // LastNameView = usersList.First().LastName;
-        // LoginView = usersList.First().Login;
-        // EmailView = usersList.First().Email;
-        // PasswordView = usersList.First().Password;
-        // AccessLevelIndex = AccessLevelList.IndexOf(usersList.First().AccessLevel);
-        // NotesView = usersList.First().Notes;
 
     }
-
     [RelayCommand]
-    private void Testing()
+    private async void Testing()
     {
-        Console.WriteLine(UserIndex);
+        
     }
     //Метод добавления нового пользователя
     [RelayCommand]
     private void InsertNewUser()
     {
-        DataService dataService = new DataService();
         User user = new User
         {
             Id = IdView,
@@ -114,7 +106,6 @@ public partial class MainViewModel : ViewModelBase
     [RelayCommand]
     private void UpdateUserData()
     {
-        DataService dataService = new DataService();
         IList<User> usersList = dataService.GetUserList();
         IdView = usersList[UserIndex].Id;
         User user = new User
@@ -135,23 +126,66 @@ public partial class MainViewModel : ViewModelBase
     [RelayCommand]
     private void DeleteUser()
     {
-        DataService dataService = new DataService();
-        IList<User> usersList = dataService.GetUserList();
-        if (UserIndex >= 0)
+        if (OpenedFile.DbPath != null) 
         {
-            dataService.DeleteUser(usersList[UserIndex].Id.ToString());
-            LoadUsersList();
+            IList<User> usersList = dataService.GetUserList();
+            if (UserIndex >= 0)
+            {
+                dataService.DeleteUser(usersList[UserIndex].Id.ToString());
+                LoadUsersList();
+            }
         }
-        else
+    }
+    //Метод поиска по имени
+    [RelayCommand]
+    private void SearchByFirstName()
+    {
+        Users.Clear();
+        foreach (User user in dataService.GetUserList())
         {
-            return;
+            if (Regex.IsMatch(user.FirstName, SearchText))
+            // if (user.FirstName.StartsWith(SearchText))
+            {
+               Users.Add(user);
+            }
+            else
+            {
+                return;
+            }
         }
+        Console.WriteLine(SearchText);
+    }
+
+    [RelayCommand]
+    private async void RandomUser()
+    {
+        User randomUser = await ApiSevice.JsonParse();
+ 
+        // FirstNameView = randomUser.FirstName;
+        // LastNameView = randomUser.LastName;
+        // LoginView = randomUser.Login;
+        // EmailView = randomUser.Email;
+        // PasswordView = randomUser.Password;
+        // NotesView = randomUser.Notes;
+        
+        User user = new User
+        {
+            Id = IdView,
+            FirstName = randomUser.FirstName,
+            LastName = randomUser.LastName,
+            Login= randomUser.Login,
+            Email = randomUser.Email, 
+            Password = DataService.GetMD5Hash(randomUser.Password),
+            AccessLevel = AccessLevelList[AccessLevelIndex],
+            Notes = randomUser.Notes
+        };
+        dataService.InsertUser(user);
+        LoadUsersList();
     }
     
     //Метод подгрузки данных из БД в коллекцию
     private void LoadUsersList()
     {
-        DataService dataService = new DataService();
         IList<User> usersList = dataService.GetUserList();
         Users = new ObservableCollection<User>(usersList);
     }

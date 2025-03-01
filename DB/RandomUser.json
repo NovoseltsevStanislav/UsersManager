@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Miss",
+        "first": "Nella",
+        "last": "Niemi"
+      },
+      "location": {
+        "street": {
+          "number": 2091,
+          "name": "Satakennankatu"
+        },
+        "city": "Hammarland",
+        "state": "Paijat-Hame",
+        "country": "Finland",
+        "postcode": 11641,
+        "coordinates": {
+          "latitude": "-25.1514",
+          "longitude": "92.4670"
+        },
+        "timezone": {
+          "offset": "-3:30",
+          "description": "Newfoundland"
+        }
+      },
+      "email": "nella.niemi@example.com",
+      "login": {
+        "uuid": "a9143c19-0535-403b-9c87-bf17bf2949ce",
+        "username": "heavypanda989",
+        "password": "klaus",
+        "salt": "uowcnQ1X",
+        "md5": "cab1238fc4a9c2fc19babfc4dd8751ba",
+        "sha1": "e49eabd3451305679cd9e838c8629183b11f368e",
+        "sha256": "6cb10ad6834006d112a6fdb02a3ce74575f1a85d7a5c521a127b35da8d94d08a"
+      },
+      "dob": {
+        "date": "1948-11-09T16:07:46.180Z",
+        "age": 76
+      },
+      "registered": {
+        "date": "2012-04-02T09:47:08.424Z",
+        "age": 12
+      },
+      "phone": "09-153-578",
+      "cell": "049-400-13-39",
+      "id": {
+        "name": "HETU",
+        "value": "NaNNA942undefined"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/70.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/70.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/70.jpg"
+      },
+      "nat": "FI"
+    }
+  ],
+  "info": {
+    "seed": "c2df9e0cdc7d4798",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}
