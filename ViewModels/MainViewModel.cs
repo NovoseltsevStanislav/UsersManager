@@ -65,7 +65,6 @@ public partial class MainViewModel : ViewModelBase
         },
     });
     //Поля для вкладки добавления нового пользователя
-    public int IdView { get; set; }
     public string FirstNameView { get; set; }
     public string LastNameView { get; set; }
     public string LoginView { get; set; }
@@ -90,7 +89,6 @@ public partial class MainViewModel : ViewModelBase
     {
         User user = new User
         {
-            Id = IdView,
             FirstName = FirstNameView,
             LastName = LastNameView,
             Login= LoginView,
@@ -107,10 +105,9 @@ public partial class MainViewModel : ViewModelBase
     private void UpdateUserData()
     {
         IList<User> usersList = dataService.GetUserList();
-        IdView = usersList[UserIndex].Id;
         User user = new User
         {
-            Id = IdView,
+            Id = usersList[UserIndex].Id,
             FirstName = FirstNameView,
             LastName = LastNameView,
             Login= LoginView,
@@ -141,36 +138,23 @@ public partial class MainViewModel : ViewModelBase
     private void SearchByFirstName()
     {
         Users.Clear();
+        Console.WriteLine(SearchText);
+        var regex = new Regex(SearchText, RegexOptions.IgnoreCase);
         foreach (User user in dataService.GetUserList())
         {
-            if (Regex.IsMatch(user.FirstName, SearchText))
-            // if (user.FirstName.StartsWith(SearchText))
+            if (regex.IsMatch(user.FirstName))
             {
-               Users.Add(user);
-            }
-            else
-            {
-                return;
+                Users.Add(user);
             }
         }
-        Console.WriteLine(SearchText);
     }
-
     [RelayCommand]
     private async void RandomUser()
     {
+        DbOpenedStatus = false;
         User randomUser = await ApiSevice.JsonParse();
- 
-        // FirstNameView = randomUser.FirstName;
-        // LastNameView = randomUser.LastName;
-        // LoginView = randomUser.Login;
-        // EmailView = randomUser.Email;
-        // PasswordView = randomUser.Password;
-        // NotesView = randomUser.Notes;
-        
         User user = new User
         {
-            Id = IdView,
             FirstName = randomUser.FirstName,
             LastName = randomUser.LastName,
             Login= randomUser.Login,
@@ -181,6 +165,7 @@ public partial class MainViewModel : ViewModelBase
         };
         dataService.InsertUser(user);
         LoadUsersList();
+        DbOpenedStatus = true;
     }
     
     //Метод подгрузки данных из БД в коллекцию
